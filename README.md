@@ -46,16 +46,23 @@ Este proceso implica la división de la base de datos en dos segmentos distintos
 ## Busqueda de hiperparámetros usando "grid search" con validación cruzada para el modelo xgboost
 Este paso es fundamental para optimizar el rendimiento del modelo XGBoost. Consiste en emplear la técnica de "Grid Search", que explora sistemáticamente una gama de valores de hiperparámetros para determinar la combinación óptima que produce el mejor resultado de predicción. Combinamos esto con la validación cruzada, un método que divide repetidamente el conjunto de datos en grupos de entrenamiento y validación para evaluar la estabilidad y la fiabilidad del modelo. Esta estrategia no solo mejora la precisión del modelo sino que también contribuye a prevenir el sobreajuste, asegurando que el modelo generalice bien a nuevos datos. La selección del tamaño de pliegues o "folds" es de 5.
 
-### 
-
+### Paso 1: búsqueda del mejor valor para `learning_rate` o taza de aprendizaje
 ![Paso 1](https://github.com/FerMarz/ames-housing-2023-R/assets/84693158/1b56e40b-4372-461c-83df-733351bde7da)
+
+### Paso 2: búsqueda del mejor valor para parámetros individuales de los árboles
 ![Paso 2](https://github.com/FerMarz/ames-housing-2023-R/assets/84693158/f2fee1c8-d393-47b1-8b90-0261d6e7bb17)
+
+### Paso 3: búsqueda de los valores de hyperparámetros de estocasticidad
 ![Paso 3](https://github.com/FerMarz/ames-housing-2023-R/assets/84693158/a4f09048-ef12-4e32-8111-0d8a0eb2f308)
+
+### Paso 4: búsqueda de hyperparámetros de regularización
 ![Paso 4](https://github.com/FerMarz/ames-housing-2023-R/assets/84693158/ab0bf22e-e9a0-4eac-b4ad-5baea5b94765)
+
+### Paso 5: volver a hacer una búsqueda de la taza de aprendizaje
 ![Paso 5](https://github.com/FerMarz/ames-housing-2023-R/assets/84693158/eb8b6658-1c9b-4229-8d70-48e2c19f4b20)
 
 ## Entrenamiento final del modelo
-
+Después de la búsqueda exhaustiva de hiperparámetros, los valores que minimizan el error RECM (Raíz del Error Cuadrático Medio) son los siguientes:
 
     learning_rate=0.02
     max_depth=4
