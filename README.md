@@ -1,5 +1,8 @@
-# Estudio de base de datos Ames Housing 2023 usando R 
+# Home Pricer AI
 
+![HomePricerLogo](https://github.com/FerMarz/ames-housing-2023-R/assets/84693158/62c8f4dc-5355-4c22-b315-c41d97edaeaf)
+
+# Estudio de base de datos Ames Housing 2023 usando R 
 Este repositorio se centra en el análisis y desarrollo de modelos de Machine Learning utilizando XGBoost para predecir los precios de la vivienda en Ames, Iowa. Predecir los precios de bienes raíces es crucial en el mercado de la vivienda, y el objetivo principal de esta investigación es explorar y refinar modelos de aprendizaje automático para mejorar la precisión de estas predicciones.
 
 El estudio se realizó usando herramientas del lenguaje R.
@@ -18,6 +21,5 @@ XGBoost es conocido por su eficiencia, rendimiento y capacidad para manejar una 
 ### Aplicaciones y Beneficios Potenciales
 Los resultados de este análisis pueden ser útiles para compradores y vendedores de viviendas, agentes inmobiliarios y urbanistas en Ames, proporcionando una herramienta para entender mejor los factores que influyen en los precios de las viviendas. Además, las metodologías desarrolladas podrían aplicarse a otros conjuntos de datos inmobiliarios, extendiendo su utilidad más allá del contexto específico de Ames, Iowa.
 
-!['Home Pricer AI' logo](https://github.com/FerMarz/ames-housing-2023-R/assets/84693158/babb1fd6-279a-4bca-a32c-ece3e8a99566)
 
 
