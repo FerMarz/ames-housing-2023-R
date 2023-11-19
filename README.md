@@ -18,4 +18,6 @@ XGBoost es conocido por su eficiencia, rendimiento y capacidad para manejar una 
 ### Aplicaciones y Beneficios Potenciales
 Los resultados de este análisis pueden ser útiles para compradores y vendedores de viviendas, agentes inmobiliarios y urbanistas en Ames, proporcionando una herramienta para entender mejor los factores que influyen en los precios de las viviendas. Además, las metodologías desarrolladas podrían aplicarse a otros conjuntos de datos inmobiliarios, extendiendo su utilidad más allá del contexto específico de Ames, Iowa.
 
+!['Home Pricer AI' logo](https://github.com/FerMarz/ames-housing-2023-R/assets/84693158/babb1fd6-279a-4bca-a32c-ece3e8a99566)
+
 
