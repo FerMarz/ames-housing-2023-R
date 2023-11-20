@@ -61,9 +61,11 @@ Se hizo una gráfica para comparar el precio de las viviendas con el área total
 
 Se realizó una matriz de correlación con todas las columnas para identificar aquellas con una relación fuerte con el precio de venta.
 
-### 
+### Matriz de correlación de variables con coeficientes mayores a 0.5 y menores a -0.5
 
+![matriz_correlacion_alta](https://github.com/FerMarz/ames-housing-2023-R/assets/84693158/3a851e3a-0571-4124-a4a5-56d35938bb40)
 
+Se realizó una matriz de correlación usando un filtro para solo observar aquellas relaciones con un valor mayor a 0.5 y menor a -0.5. Estas variables son buenos predictores para nuestro modelo.
 
 ### Matriz de correlación de las variables con coeficientes altos en relación al precio de venta
 
