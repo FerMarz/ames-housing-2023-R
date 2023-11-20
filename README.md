@@ -61,20 +61,15 @@ Se hizo una gráfica para comparar el precio de las viviendas con el área total
 
 Se realizó una matriz de correlación con todas las columnas para identificar aquellas con una relación fuerte con el precio de venta.
 
+### 
 
 
 
+### Matriz de correlación de las variables con coeficientes altos en relación al precio de venta
 
+![matriz_correlacion_procesado2](https://github.com/FerMarz/ames-housing-2023-R/assets/84693158/58d15914-8e05-418c-b9de-4c3e3be4ad6e)
 
-
-
-
-
-
-
-
-
-
+A partir de la primer matriz de correlación, se eligieron las características más importantes para realizar una tercera matriz de correlación y así identificar aquellas con coeficientes de Pearson altos relacionados al precio de venta.
 
 ## Preprocesamiento de datos
 Este paso es crucial para preparar la base de datos para el análisis y modelado. Incluye la limpieza de datos, donde corregimos o eliminamos registros erróneos o irrelevantes; la imputación, donde reemplazamos los datos faltantes con valores sustitutos; la codificación de variables categóricas para convertirlas en formatos numéricos que los modelos puedan interpretar; la normalización o estandarización de rangos de datos para que tengan una escala común, facilitando así la convergencia en algoritmos de aprendizaje automático. Todos los procesos mejoran la eficiencia computacional y la interpretación de los resultados.
