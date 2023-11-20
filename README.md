@@ -37,9 +37,44 @@ A continuación se describe cada proceso.
 ## Análisis de la base de datos original
 Este proceso nos ayudará a examinar las estadísticas descriptivas para comprender la distribución de los datos, explorar las relaciones entre las variables, identificar si hay datos faltantes que requieran imputación, y determinar si es necesario reescalar los datos para técnicas de modelado específicas.
 
+### Distribución de precio de venta
+
+![distribucion_precio_venta](https://github.com/FerMarz/ames-housing-2023-R/assets/84693158/88eee6fe-f4cc-413e-aea9-44260275dd6a)
+
+Se realizó una gráfica de barras para observar la tendencia de los precios de las casas disponibles en el mercado.
+
+### Gráfica de dispersión del área del garage vs. precio de venta
+
+![precio_venta_area_garage](https://github.com/FerMarz/ames-housing-2023-R/assets/84693158/913a2787-f6ed-48b2-b455-b0c7783fafc7)
+
+Se realizó una gráfica de dispersión entre el precio de venta y el área del garage. Se observaron muchas propiedades con un valor 0 en el área de garage al no disponer del mismo.
+
+### Gráfica de dispersión del área de vivienda vs. el precio de venta y su regresión lineal
+
 ![SalePrice_Gr Liv Area](https://github.com/FerMarz/ames-housing-2023-R/assets/84693158/419ef8bc-650a-4e39-9af8-b5ee8d151ece)
 
 Se hizo una gráfica para comparar el precio de las viviendas con el área total de cada una. Se observó una relación positiva entre ambos factores y un evidente aumento del precio en relación al tamaño de la propiedad.
+
+### Matriz de correlación
+
+![matriz_correlacion_procesado](https://github.com/FerMarz/ames-housing-2023-R/assets/84693158/e425871f-49fe-4cbe-8fd0-fcfbff46b0ab)
+
+Se realizó una matriz de correlación con todas las columnas para identificar aquellas con una relación fuerte con el precio de venta.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Preprocesamiento de datos
 Este paso es crucial para preparar la base de datos para el análisis y modelado. Incluye la limpieza de datos, donde corregimos o eliminamos registros erróneos o irrelevantes; la imputación, donde reemplazamos los datos faltantes con valores sustitutos; la codificación de variables categóricas para convertirlas en formatos numéricos que los modelos puedan interpretar; la normalización o estandarización de rangos de datos para que tengan una escala común, facilitando así la convergencia en algoritmos de aprendizaje automático. Todos los procesos mejoran la eficiencia computacional y la interpretación de los resultados.
