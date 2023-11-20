@@ -86,6 +86,8 @@ Este proceso implica la división de la base de datos en dos segmentos distintos
 ## Busqueda de hiperparámetros usando "grid search" con validación cruzada para el modelo xgboost
 Este paso es fundamental para optimizar el rendimiento del modelo XGBoost. Consiste en emplear la técnica de "Grid Search", que explora sistemáticamente una gama de valores de hiperparámetros para determinar la combinación óptima que produce el mejor resultado de predicción. Combinamos esto con la validación cruzada, un método que divide repetidamente el conjunto de datos en grupos de entrenamiento y validación para evaluar la estabilidad y la fiabilidad del modelo. Esta estrategia no solo mejora la precisión del modelo sino que también contribuye a prevenir el sobreajuste, asegurando que el modelo generalice bien a nuevos datos. La selección del tamaño de pliegues o "folds" es de 5.
 
+La métrica del error es la Raíz del Error Cuadrático Medio o (RECM). En las siguientes imágenes, los mejores valores de los hiperparámetros estan de color naranja.
+
 ### Paso 1: búsqueda del mejor valor para `learning_rate` o tasa de aprendizaje
 ![Paso 1](https://github.com/FerMarz/ames-housing-2023-R/assets/84693158/1b56e40b-4372-461c-83df-733351bde7da)
 
