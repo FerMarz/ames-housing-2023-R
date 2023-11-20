@@ -144,10 +144,13 @@ La gráfica ilustra la importancia relativa de cada característica, representan
 
 La gráfica ilustra la importancia relativa de cada característica, representando en el eje X las características y en el eje Y la ganancia o el frecuencia.
 
-### 
+### Afirmación de nuestra hipótesis inicial
 
 La hipótesis inicial planteada sostenía que las variables `Ground Living Area` y `Garage Area` representaban los predictores más significativos en el modelo, basándose en los resultados obtenidos de la matriz de correlación. Tras la fase de entrenamiento con XGBoost y el consecuente análisis de la importancia de las características, los datos respaldaron dicha hipótesis. Las métricas de importancia, incluyendo frecuencia, cover y gain, indicaron consistentemente que "Ground Living Area" y "Garage Area" eran las características preponderantes en la realización de divisiones dentro de los árboles de decisión. Estos hallazgos no solo validan nuestra hipótesis sino que también reafirman el valor predictivo de estas variables en el modelo, subrayando su capacidad para mejorar la generalización y optimizar la precisión de las predicciones del modelo.
 
 ## Creación de la idea del producto y marca
 
+Nuestra idea del producto se puede ver en la siguiente liga de nuestra presentación: [enlace público de la presentación del producto](https://www.canva.com/design/DAF0lFDI_78/irClYSgIi2-MPTbXKeqJQA/view?utm_content=DAF0lFDI_78&utm_campaign=designshare&utm_medium=link&utm_source=editor)
+
+![HomePricerLogo](https://github.com/FerMarz/ames-housing-2023-R/assets/84693158/62c8f4dc-5355-4c22-b315-c41d97edaeaf)
 
