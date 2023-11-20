@@ -83,6 +83,9 @@ Se contó el número de datos faltantes en cada una de las columnas de la base d
 ## Creación de conjuntos de entrenamiento y prueba
 Este proceso implica la división de la base de datos en dos segmentos distintos: un conjunto de entrenamiento y un conjunto de prueba. Hemos asignado el 70% de los datos al conjunto de entrenamiento, que se utilizará para construir y afinar nuestros modelos de aprendizaje automático. El restante 30% constituye el conjunto de prueba, que emplearemos para evaluar el rendimiento y la generalización de los modelos en datos no vistos anteriormente. Esta división estratégica es esencial para evitar el sobreajuste y asegurar que los modelos tengan una capacidad predictiva robusta en condiciones reales.
 
+Los conjuntos que hemos creado se encuentran en [Train test](https://github.com/FerMarz/ames-housing-2023/blob/main/data/AmesHousing_train_set.csv) y 
+[Test Set](https://github.com/FerMarz/ames-housing-2023/blob/main/data/AmesHousing_test_set.csv) ubicados en nuestro repositorio de Github.
+
 ## Busqueda de hiperparámetros usando "grid search" con validación cruzada para el modelo xgboost
 Este paso es fundamental para optimizar el rendimiento del modelo XGBoost. Consiste en emplear la técnica de "Grid Search", que explora sistemáticamente una gama de valores de hiperparámetros para determinar la combinación óptima que produce el mejor resultado de predicción. Combinamos esto con la validación cruzada, un método que divide repetidamente el conjunto de datos en grupos de entrenamiento y validación para evaluar la estabilidad y la fiabilidad del modelo. Esta estrategia no solo mejora la precisión del modelo sino que también contribuye a prevenir el sobreajuste, asegurando que el modelo generalice bien a nuevos datos. La selección del tamaño de pliegues o "folds" es de 5.
 
@@ -114,10 +117,36 @@ Después de la búsqueda exhaustiva de hiperparámetros, los valores que minimiz
     reg_alpha=1000
     reg_lambda=1
 
+El modelo XGBoost fue entrenado utilizando un total de `15,000` estimadores. La mejor generalización se logró en el estimador número `2,658`, donde el valor mínimo del RMSE (Raíz del Error Cuadrado Medio) para el conjunto de prueba fue aproximadamente `$23,482.77`, aproximadamente. Eso quiere decir que las predicciones de los precios de venta tienen un error promedio de 23 mil dólares. Esto es un error pequeño para un promedio de `$180,796.00`.
 
+![GraficaDeRECM](https://github.com/FerMarz/ames-housing-2023-R/assets/84693158/26eea143-ecae-4c3e-a8ac-62d93a835e22)
+
+La grafica muestra que existe sobreentrenamiento, sin embargo, podemos ver que no explota, sino que el modelo xgboost mantiene decentemente los valores de error para el conjunto de validación. COn una parada temprana, el modelo puede generalizar muy bien en los `2,658` estimadores.
 
 ## Resultados y conclusiones
 
+En una gráfica de importancia con XGBoost utilizando ganancia y cover, la ganancia evalúa cuánto mejora la precisión al dividir los datos según una característica, indicando su importancia. Por otro lado, el cover mide cuántos datos afecta una característica al realizar una división. Una gráfica de importancia de características basada en la frecuencia en XGBoost ilustra la relevancia relativa de cada característica según la frecuencia con que se emplean para tomar decisiones durante el entrenamiento del modelo. Características con una alta frecuencia de uso se presentan como destacadas en la visualización.
+
+### Gráfica de importancia según el valor `gain`.
+![matriz_importancia1](https://github.com/FerMarz/ames-housing-2023-R/assets/84693158/21a42e44-05a5-4214-8a5f-19f1167010df)
+
+La gráfica ilustra la importancia relativa de cada característica, representando en el eje X las características y en el eje Y la ganancia o el valor de gain.
+
+### Gráfica de importancia según el valor `cover`.
+
+![matriz_importancia2](https://github.com/FerMarz/ames-housing-2023-R/assets/84693158/fd3b39fb-85c3-4672-b7ff-3e878a1bcfd4)
+
+La gráfica ilustra la importancia relativa de cada característica, representando en el eje X las características y en el eje Y la ganancia o el cover.
+
+### Gráfica de importancia según el valor `frecuencia`.
+
+![matriz_importancia3](https://github.com/FerMarz/ames-housing-2023-R/assets/84693158/ab57ead7-4787-4b6f-83ab-3658545dda22)
+
+La gráfica ilustra la importancia relativa de cada característica, representando en el eje X las características y en el eje Y la ganancia o el frecuencia.
+
+### 
+
+La hipótesis inicial planteada sostenía que las variables `Ground Living Area` y `Garage Area` representaban los predictores más significativos en el modelo, basándose en los resultados obtenidos de la matriz de correlación. Tras la fase de entrenamiento con XGBoost y el consecuente análisis de la importancia de las características, los datos respaldaron dicha hipótesis. Las métricas de importancia, incluyendo frecuencia, cover y gain, indicaron consistentemente que "Ground Living Area" y "Garage Area" eran las características preponderantes en la realización de divisiones dentro de los árboles de decisión. Estos hallazgos no solo validan nuestra hipótesis sino que también reafirman el valor predictivo de estas variables en el modelo, subrayando su capacidad para mejorar la generalización y optimizar la precisión de las predicciones del modelo.
 
 ## Creación de la idea del producto y marca
 
