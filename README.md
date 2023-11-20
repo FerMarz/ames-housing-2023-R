@@ -37,14 +37,16 @@ A continuación se describe cada proceso.
 ## Análisis de la base de datos original
 Este proceso nos ayudará a examinar las estadísticas descriptivas para comprender la distribución de los datos, explorar las relaciones entre las variables, identificar si hay datos faltantes que requieran imputación, y determinar si es necesario reescalar los datos para técnicas de modelado específicas.
 
-## Preprocesamiento de datos
-Este paso es crucial para preparar la base de datos para el análisis y modelado. Incluye la limpieza de datos, donde corregimos o eliminamos registros erróneos o irrelevantes; la imputación, donde reemplazamos los datos faltantes con valores sustitutos; la codificación de variables categóricas para convertirlas en formatos numéricos que los modelos puedan interpretar; la normalización o estandarización de rangos de datos para que tengan una escala común, facilitando así la convergencia en algoritmos de aprendizaje automático. Todos los procesos mejoran la eficiencia computacional y la interpretación de los resultados.
-
-
 ![SalePrice_Gr Liv Area](https://github.com/FerMarz/ames-housing-2023-R/assets/84693158/419ef8bc-650a-4e39-9af8-b5ee8d151ece)
 
 Se hizo una gráfica para comparar el precio de las viviendas con el área total de cada una. Se observó una relación positiva entre ambos factores y un evidente aumento del precio en relación al tamaño de la propiedad.
 
+## Preprocesamiento de datos
+Este paso es crucial para preparar la base de datos para el análisis y modelado. Incluye la limpieza de datos, donde corregimos o eliminamos registros erróneos o irrelevantes; la imputación, donde reemplazamos los datos faltantes con valores sustitutos; la codificación de variables categóricas para convertirlas en formatos numéricos que los modelos puedan interpretar; la normalización o estandarización de rangos de datos para que tengan una escala común, facilitando así la convergencia en algoritmos de aprendizaje automático. Todos los procesos mejoran la eficiencia computacional y la interpretación de los resultados.
+
+![Datos_faltantes_por_columna](https://github.com/FerMarz/ames-housing-2023-R/assets/84693158/c5397dbb-192f-4293-84ce-5001264a3423)
+
+Se contó el número de datos faltantes en cada una de las columnas de la base de datos y se realizó una gráfica de barras para identificar aquellas columnas con la mayor información faltante.
 
 ## Creación de conjuntos de entrenamiento y prueba
 Este proceso implica la división de la base de datos en dos segmentos distintos: un conjunto de entrenamiento y un conjunto de prueba. Hemos asignado el 70% de los datos al conjunto de entrenamiento, que se utilizará para construir y afinar nuestros modelos de aprendizaje automático. El restante 30% constituye el conjunto de prueba, que emplearemos para evaluar el rendimiento y la generalización de los modelos en datos no vistos anteriormente. Esta división estratégica es esencial para evitar el sobreajuste y asegurar que los modelos tengan una capacidad predictiva robusta en condiciones reales.
