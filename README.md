@@ -154,3 +154,8 @@ Nuestra idea del producto se puede ver en la siguiente liga de nuestra presentac
 
 ![HomePricerLogo](https://github.com/FerMarz/ames-housing-2023-R/assets/84693158/62c8f4dc-5355-4c22-b315-c41d97edaeaf)
 
+## Información de contacto
+
+Fermín Martínez: fer.marz.py@gmail.com
+Gustavo Lino: glino092@gmail.com
+Sergio Saavedra: checonidas92@gmail.com
