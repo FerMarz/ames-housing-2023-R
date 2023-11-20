@@ -156,6 +156,10 @@ Nuestra idea del producto se puede ver en la siguiente liga de nuestra presentac
 
 ## Información de contacto
 
+Información de contacto de los autores del proyecto.
+
 Fermín Martínez: fer.marz.py@gmail.com
+
 Gustavo Lino: glino092@gmail.com
+
 Sergio Saavedra: checonidas92@gmail.com
